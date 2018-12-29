@@ -4,5 +4,8 @@ In access control systems, an object can be any resource (file, record, applicat
 """
 mutable struct Object <: AbstractObject
     label::String;
-
+end;
+function Object(;n::Int = 1)::Vector{Object}
+    useless(x) = Object("an object");
+    broadcast(useless, repeat([0], n));
 end;
