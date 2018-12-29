@@ -1,8 +1,9 @@
 
-function set_label(thing::AbstractThing, label::String)::Thing
+function set_label(thing::AbstractThing, label::String)::AbstractThing
     thing.label = label;
     return thing;
 end;
-function set_label!(things::AbstractArray{<:AbstractThing}, labels::AbstractArray{<:String})::Array{<:AbstractThing}
-    broadcast(set_label, things, labels);
+function set_label!(thing::AbstractArray{<:AbstractThing}, label::AbstractArray{<:String})::Array{<:AbstractThing}
+    broadcast(set_label, thing, label);
+    return thing;
 end;

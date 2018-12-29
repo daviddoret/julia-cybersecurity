@@ -1,1 +1,1 @@
-abstract type AbstractObject  end;
+abstract type AbstractObject  <: AbstractThing end;

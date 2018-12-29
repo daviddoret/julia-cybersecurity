@@ -20,7 +20,11 @@ export AccessControlSystem;
 
 include("get_label.jl");
 export get_label;
+export get_label!;
 include("set_label.jl");
 export set_label;
+export set_label!;
 
 end; # module
+
+using .IAG;
