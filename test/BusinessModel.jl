@@ -1,13 +1,11 @@
 using Test;
 
 @testset "BusinessModel Tests" begin
-           @testset "Construction" begin
-               m =
-               @test foo("cat") == 9
-               @test foo("dog") == foo("cat")
-           end
-           @testset "count_users $i" for i in 1:3
-               @test foo(zeros(i)) == i^2
-               @test foo(fill(1.0, i)) == i^2
-           end
-       end;
+   @testset "add_users $i" for i in 1:3
+       u = 2;
+       r = 3;
+       m = CyberSecurity.BusinessModel(u, r, .02);
+       CyberSecurity.add_users(m, i);
+       @test CyberSecurity.count_users(m) == u + i;
+   end
+end;
