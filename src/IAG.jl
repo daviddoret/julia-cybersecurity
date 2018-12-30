@@ -1,4 +1,7 @@
-module IAG # Identity and Access Governance module
+"""
+# IAG: The Identity and Access Governance Julia module
+"""
+module IAG
 
 include("AbstractThing.jl");
 export AbstractThing;
